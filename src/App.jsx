@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       {data.classes && (
-        <table className="text-left">
+        <table className="border-b border-white">
           <tr className="border-b border-white ">
             <th>Classes</th>
             <th>Sets</th>
@@ -40,34 +40,46 @@ function App() {
             <th>Races</th>
             <th>Standard</th>
           </tr>
-          <td className="border-x border-white">
+          <td className="border-x border-white px-5">
             {data.classes.map((item, index) => (
-              <tr key={index}>{item}</tr>
+              <tr className="text-left" key={index}>
+                {item}
+              </tr>
             ))}
           </td>
-          <td className="border-r border-white">
-            {data.sets.map((item, index) => (
-              <tr key={index}>{item}</tr>
+          <td className="border-x border-white px-5">
+            {data.sets.slice(0, 14).map((item, index) => (
+              <tr className="text-left" key={index}>
+                {item}
+              </tr>
             ))}
           </td>
-          <td className="border-r border-white">
+          <td className="border-x border-white px-5">
             {data.factions.map((item, index) => (
-              <tr key={index}>{item}</tr>
+              <tr className="text-left" key={index}>
+                {item}
+              </tr>
             ))}
           </td>
-          <td className="border-r border-white">
+          <td className="border-x border-white px-5">
             {data.types.map((item, index) => (
-              <tr key={index}>{item}</tr>
+              <tr className="text-left" key={index}>
+                {item}
+              </tr>
             ))}
           </td>
-          <td className="border-r border-white">
+          <td className="border-x border-white px-5">
             {data.races.map((item, index) => (
-              <tr key={index}>{item}</tr>
+              <tr className="text-left" key={index}>
+                {item}
+              </tr>
             ))}
           </td>
-          <td className="border-r border-white">
+          <td className="border-x border-white px-5">
             {data.standard.map((item, index) => (
-              <tr key={index}>{item}</tr>
+              <tr className="text-left" key={index}>
+                {item}
+              </tr>
             ))}
           </td>
         </table>
