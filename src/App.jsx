@@ -30,10 +30,9 @@ function App() {
 
   return (
     <>
-      <h1>OTEN</h1>
       {data.classes && (
-        <table>
-          <tr>
+        <table className="text-left">
+          <tr className="border-b border-white ">
             <th>Classes</th>
             <th>Sets</th>
             <th>Factions</th>
@@ -41,13 +40,33 @@ function App() {
             <th>Races</th>
             <th>Standard</th>
           </tr>
-          <td>
+          <td className="border-x border-white">
             {data.classes.map((item, index) => (
               <tr key={index}>{item}</tr>
             ))}
           </td>
-          <td>
+          <td className="border-r border-white">
             {data.sets.map((item, index) => (
+              <tr key={index}>{item}</tr>
+            ))}
+          </td>
+          <td className="border-r border-white">
+            {data.factions.map((item, index) => (
+              <tr key={index}>{item}</tr>
+            ))}
+          </td>
+          <td className="border-r border-white">
+            {data.types.map((item, index) => (
+              <tr key={index}>{item}</tr>
+            ))}
+          </td>
+          <td className="border-r border-white">
+            {data.races.map((item, index) => (
+              <tr key={index}>{item}</tr>
+            ))}
+          </td>
+          <td className="border-r border-white">
+            {data.standard.map((item, index) => (
               <tr key={index}>{item}</tr>
             ))}
           </td>
