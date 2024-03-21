@@ -22,7 +22,7 @@ function InfoCard() {
           objectFit="cover"
           maxW={{ base: "100%", sm: "200px" }}
           src="src\assets\school-id-pic.jpeg"
-          alt="Caffe Latte"
+          alt="src\assets\school-id-pic.jpeg"
           borderRadius={{ base: "0", sm: "md" }}
         />
 
