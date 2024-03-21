@@ -18,14 +18,6 @@ function InfoCard() {
         overflow="hidden"
         variant="outline"
       >
-        <Image
-          objectFit="cover"
-          maxW={{ base: "100%", sm: "200px" }}
-          src="public\assets\school-id-pic.jpeg"
-          alt="Rocky Angelo P. Castañeros"
-          borderRadius={{ base: "0", sm: "md" }}
-        />
-
         <Stack>
           <CardBody className="text-start">
             <Heading size="md">Rocky Angelo P. Castañeros</Heading>
