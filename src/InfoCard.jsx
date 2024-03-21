@@ -21,8 +21,8 @@ function InfoCard() {
         <Image
           objectFit="cover"
           maxW={{ base: "100%", sm: "200px" }}
-          src="src\assets\school-id-pic.jpeg"
-          alt="src\assets\school-id-pic.jpeg"
+          src="..\..\src\assets\school-id-pic.jpeg"
+          alt="Rocky Angelo P. Castañeros"
           borderRadius={{ base: "0", sm: "md" }}
         />
 
