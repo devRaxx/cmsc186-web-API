@@ -1,6 +1,17 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
+} from "@chakra-ui/react";
 
 const options = {
   method: "GET",
@@ -31,58 +42,37 @@ function App() {
   return (
     <>
       {data.classes && (
-        <table className="table-auto border-b border-white">
-          <tr className="font-extrabold border-b p-2 border-white">
-            <th>Classes</th>
-            <th>Sets</th>
-            <th>Factions</th>
-            <th>Types</th>
-            <th>Races</th>
-            <th>Standard</th>
-          </tr>
-          <td className="border-x border-white px-5">
-            {data.classes.map((item, index) => (
-              <tr className="text-left border-b border-white" key={index}>
-                {item}
-              </tr>
-            ))}
-          </td>
-          <td className="border-x border-white">
-            {data.sets.slice(0, 14).map((item, index) => (
-              <tr className="text-left" key={index}>
-                {item}
-              </tr>
-            ))}
-          </td>
-          <td className="border-x border-white">
-            {data.factions.map((item, index) => (
-              <tr className="text-left" key={index}>
-                {item}
-              </tr>
-            ))}
-          </td>
-          <td className="border-x border-white">
-            {data.types.map((item, index) => (
-              <tr className="text-left" key={index}>
-                {item}
-              </tr>
-            ))}
-          </td>
-          <td className="border-x border-white">
-            {data.races.map((item, index) => (
-              <tr className="text-left" key={index}>
-                {item}
-              </tr>
-            ))}
-          </td>
-          <td className="border-x border-white">
-            {data.standard.map((item, index) => (
-              <tr className="text-left" key={index}>
-                {item}
-              </tr>
-            ))}
-          </td>
-        </table>
+        <TableContainer>
+          <Table variant="simple" colorScheme="teal">
+            <TableCaption placement="top">Hearthstone Data</TableCaption>
+            <Tbody className="flex flex-row">
+              <Tr className="flex flex-col">
+                <Th>Classes</Th>
+                {data.classes.map((item) => (
+                  <Td key={item}>{item}</Td>
+                ))}
+              </Tr>
+              <Tr className="flex flex-col">
+                <Th>Sets</Th>
+                {data.sets.slice(0, 14).map((item) => (
+                  <Td key={item}>{item}</Td>
+                ))}
+              </Tr>
+              <Tr className="flex flex-col">
+                <Th>Factions</Th>
+                {data.factions.map((item) => (
+                  <Td key={item}>{item}</Td>
+                ))}
+              </Tr>
+              <Tr className="flex flex-col">
+                <Th>Standards</Th>
+                {data.standard.map((item) => (
+                  <Td key={item}>{item}</Td>
+                ))}
+              </Tr>
+            </Tbody>
+          </Table>
+        </TableContainer>
       )}
     </>
   );
