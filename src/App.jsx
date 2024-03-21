@@ -1,11 +1,10 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import InfoCard from "./InfoCard";
 import axios from "axios";
 import {
   Table,
-  Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
@@ -41,33 +40,77 @@ function App() {
 
   return (
     <>
+      <InfoCard />
       {data.classes && (
         <TableContainer>
-          <Table variant="simple" colorScheme="teal">
-            <TableCaption placement="top">Hearthstone Data</TableCaption>
+          <Table variant="unstyled" colorScheme="facebook" size="md">
+            <TableCaption placement="top">
+              <h1 className="text-lg">Hearthstone Data</h1>
+            </TableCaption>
             <Tbody className="flex flex-row">
               <Tr className="flex flex-col">
                 <Th>Classes</Th>
-                {data.classes.map((item) => (
-                  <Td key={item}>{item}</Td>
+                {data.classes.slice(0, 13).map((item, index) => (
+                  <Td
+                    key={item}
+                    style={{
+                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
+                    }}
+                  >
+                    {item}
+                  </Td>
                 ))}
               </Tr>
               <Tr className="flex flex-col">
                 <Th>Sets</Th>
-                {data.sets.slice(0, 14).map((item) => (
-                  <Td key={item}>{item}</Td>
-                ))}
-              </Tr>
-              <Tr className="flex flex-col">
-                <Th>Factions</Th>
-                {data.factions.map((item) => (
-                  <Td key={item}>{item}</Td>
+                {data.sets.slice(0, 13).map((item, index) => (
+                  <Td
+                    key={item}
+                    style={{
+                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
+                    }}
+                  >
+                    {item}
+                  </Td>
                 ))}
               </Tr>
               <Tr className="flex flex-col">
                 <Th>Standards</Th>
-                {data.standard.map((item) => (
-                  <Td key={item}>{item}</Td>
+                {data.standard.slice(0, 13).map((item, index) => (
+                  <Td
+                    key={item}
+                    style={{
+                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
+                    }}
+                  >
+                    {item}
+                  </Td>
+                ))}
+              </Tr>
+              <Tr className="flex flex-col">
+                <Th>Wild</Th>
+                {data.wild.slice(0, 13).map((item, index) => (
+                  <Td
+                    key={item}
+                    style={{
+                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
+                    }}
+                  >
+                    {item}
+                  </Td>
+                ))}
+              </Tr>
+              <Tr className="flex flex-col">
+                <Th>Races</Th>
+                {data.races.slice(0, 13).map((item, index) => (
+                  <Td
+                    key={item}
+                    style={{
+                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
+                    }}
+                  >
+                    {item}
+                  </Td>
                 ))}
               </Tr>
             </Tbody>
