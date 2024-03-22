@@ -38,6 +38,9 @@ function App() {
     fetchData();
   }, []);
 
+  const getBackgroundColor = (index) => {
+    return { backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4" };
+  };
   return (
     <>
       <InfoCard />
@@ -51,12 +54,7 @@ function App() {
               <Tr className="flex flex-col">
                 <Th>Classes</Th>
                 {data.classes.slice(0, 13).map((item, index) => (
-                  <Td
-                    key={item}
-                    style={{
-                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
-                    }}
-                  >
+                  <Td key={item} style={getBackgroundColor(index)}>
                     {item}
                   </Td>
                 ))}
@@ -64,12 +62,7 @@ function App() {
               <Tr className="flex flex-col">
                 <Th>Sets</Th>
                 {data.sets.slice(0, 13).map((item, index) => (
-                  <Td
-                    key={item}
-                    style={{
-                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
-                    }}
-                  >
+                  <Td key={item} style={getBackgroundColor(index)}>
                     {item}
                   </Td>
                 ))}
@@ -77,12 +70,7 @@ function App() {
               <Tr className="flex flex-col">
                 <Th>Standards</Th>
                 {data.standard.slice(0, 13).map((item, index) => (
-                  <Td
-                    key={item}
-                    style={{
-                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
-                    }}
-                  >
+                  <Td key={item} style={getBackgroundColor(index)}>
                     {item}
                   </Td>
                 ))}
@@ -90,12 +78,7 @@ function App() {
               <Tr className="flex flex-col">
                 <Th>Wild</Th>
                 {data.wild.slice(0, 13).map((item, index) => (
-                  <Td
-                    key={item}
-                    style={{
-                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
-                    }}
-                  >
+                  <Td key={item} style={getBackgroundColor(index)}>
                     {item}
                   </Td>
                 ))}
@@ -103,12 +86,7 @@ function App() {
               <Tr className="flex flex-col">
                 <Th>Races</Th>
                 {data.races.slice(0, 13).map((item, index) => (
-                  <Td
-                    key={item}
-                    style={{
-                      backgroundColor: index % 2 !== 0 ? "#FFFFFF" : "#8DDCA4",
-                    }}
-                  >
+                  <Td key={item} style={getBackgroundColor(index)}>
                     {item}
                   </Td>
                 ))}
