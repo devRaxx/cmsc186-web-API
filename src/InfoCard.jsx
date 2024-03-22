@@ -9,6 +9,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { VscGithubInverted } from "react-icons/vsc";
+import { FaVideo } from "react-icons/fa";
 
 function InfoCard() {
   return (
@@ -37,10 +38,23 @@ function InfoCard() {
             </Text>
           </CardBody>
           <CardFooter>
-            <a target="top" href="https://github.com/devRaxx/cmsc186-web-api">
+            <a
+              className="pr-4"
+              target="top"
+              href="https://github.com/devRaxx/cmsc186-web-api"
+            >
               <Button>
                 <VscGithubInverted />
                 <p className="pl-2">Github Repo</p>
+              </Button>
+            </a>
+            <a
+              target="top"
+              href="https://drive.google.com/file/d/1jUFqDM2ONqrcEfRszqPGpRvJADzgUlZx/view?usp=sharing"
+            >
+              <Button>
+                <FaVideo />
+                <p className="pl-2">Video Recording</p>
               </Button>
             </a>
           </CardFooter>
