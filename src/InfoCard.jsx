@@ -40,7 +40,7 @@ function InfoCard() {
           <CardFooter>
             <a
               className="pr-4"
-              target="top"
+              target="_blank"
               href="https://github.com/devRaxx/cmsc186-web-api"
             >
               <Button>
@@ -49,7 +49,7 @@ function InfoCard() {
               </Button>
             </a>
             <a
-              target="top"
+              target="_blank"
               href="https://drive.google.com/file/d/1jUFqDM2ONqrcEfRszqPGpRvJADzgUlZx/view?usp=sharing"
             >
               <Button>
